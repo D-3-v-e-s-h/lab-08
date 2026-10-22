@@ -24,5 +24,7 @@ class Wizard(val name: String, var mana: Int, var spellPower: Int) {
     // This is my small change to check if continuous integration (CI) is working.
     // I will now add, commit, and push this small change.
 
-    fun restoreMana(amount: Int) { }
+    fun restoreMana(amount: Int) {
+        mana = minOf(100, mana + amount)
+    }
 }
